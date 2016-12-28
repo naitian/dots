@@ -1,0 +1,9 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_1='/Users/naitian/Documents/School/CS/Projects/Lollipop/.git'
+let g:netrw_dirhist_2='/Users/naitian/.vim'
+let g:netrw_dirhist_3='/Users/naitian/Documents/School/CS/Android/Jammin/app/build/outputs/apk/app-debug-unaligned/META-INF'
+let g:netrw_dirhist_4='/Users/naitian/Documents/School/CS/Labs/Sudoku'
+let g:netrw_dirhist_5='/Volumes/homes/.vim'
+let g:netrw_dirhist_6='/Users/naitian/.grip'
+let g:netrw_dirhist_7='/Users/naitian/.vim/bundle/vim-airline-themes/autoload/airline/themes'

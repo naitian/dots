@@ -1,0 +1,7 @@
+pane	0	0	:bash	1	:*	0	:/Users/naitian	1	bash	:
+pane	main	0	:Sudoku	1	:*	0	:/Users/naitian/Documents/School/CS/Labs/Sudoku	1	Vim	:/usr/local/Cellar/macvim/7.4-96/MacVim.app/Contents/MacOS/Vim /Users/naitian/.tmux.conf
+pane	main	0	:Sudoku	1	:*	1	:/Users/naitian/Documents/School/CS/Labs/Sudoku	0	bash	:
+pane	main	0	:Sudoku	1	:*	2	:/Users/naitian/Documents/School/CS/Labs/Sudoku	0	bash	:
+window	0	0	1	:*	bcbe,137x53,0,0,1
+window	main	0	1	:*	be76,137x53,0,0{87x53,0,0,2,49x53,88,0[49x23,88,0,3,49x29,88,24,4]}
+state	main	0

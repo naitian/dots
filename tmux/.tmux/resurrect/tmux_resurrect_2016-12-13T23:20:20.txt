@@ -1,0 +1,20 @@
+pane	0	0	:bash	1	:*	0	:/Users/naitian	1	bash	:
+pane	main	0	:sudoku	0	:	0	:/Users/naitian/Documents/School/CS/Labs/Sudoku	1	Vim	:/usr/local/Cellar/macvim/7.4-96/MacVim.app/Contents/MacOS/Vim twodoku.py
+pane	main	0	:sudoku	0	:	1	:/Users/naitian/Documents/School/CS/Labs/Sudoku	0	Python	:/Library/Frameworks/Python.framework/Versions/3.5/Resources/Python.app/Contents/MacOS/Python
+pane	main	0	:sudoku	0	:	2	:/Users/naitian/Documents/School/CS/Labs/Sudoku	0	bash	:
+pane	main	1	:tictactoe	0	:	0	:/Users/naitian/Documents/School/CS/Labs/TicTacToe	1	Vim	:/usr/local/Cellar/macvim/7.4-96/MacVim.app/Contents/MacOS/Vim tictactoe.py
+pane	main	1	:tictactoe	0	:	1	:/Users/naitian/Documents/School/CS/Labs/TicTacToe	0	bash	:/Library/Frameworks/Python.framework/Versions/3.5/Resources/Python.app/Contents/MacOS/Python
+pane	main	1	:tictactoe	0	:	2	:/Users/naitian/Documents/School/CS/Labs/TicTacToe	0	bash	:
+pane	main	2	:random	0	:-	0	:/Users/naitian/Documents/School/CS/Projects/Deutschball	1	bash	:
+pane	main	3	:devclub	1	:*	0	:/Users/naitian/Documents/School/CS/DevClub/WebVR	1	Vim	:/usr/local/Cellar/macvim/7.4-96/MacVim.app/Contents/MacOS/Vim index.html
+pane	main	3	:devclub	1	:*	1	:/Users/naitian/Documents/School/CS/DevClub/WebVR	0	bash	:
+pane	main	3	:devclub	1	:*	2	:/Users/naitian/Documents/School/CS/DevClub/WebVR	0	bash	:-bash
+pane	main	3	:devclub	1	:*	3	:/Users/naitian/Documents/School/CS/DevClub/WebVR	0	Python	:/Library/Frameworks/Python.framework/Versions/3.5/Resources/Python.app/Contents/MacOS/Python /Library/Frameworks/Python.framework/Versions/3.5/bin/grip
+pane	main	4	:irc	0	:	0	:/Users/naitian	1	weechat	:weechat
+window	0	0	1	:*	6782,204x58,0,0,13
+window	main	0	0	:	838e,202x58,0,0{120x58,0,0,2,81x58,121,0[81x26,121,0,3,81x31,121,27,4]}
+window	main	1	0	:	6c5b,204x58,0,0{125x58,0,0,6,78x58,126,0[78x24,126,0,9,78x33,126,25,8]}
+window	main	2	0	:-	6703,202x58,0,0,14
+window	main	3	1	:*	c006,202x58,0,0{132x58,0,0,15,69x58,133,0[69x52,133,0,16,69x2,133,53,19,69x2,133,56,18]}
+window	main	4	0	:	e6ff,202x58,0,0,20
+state	main	

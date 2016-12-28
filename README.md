@@ -1,1 +1,3 @@
 # dots
+
+For my personal use, mostly stolen from other people's config files...

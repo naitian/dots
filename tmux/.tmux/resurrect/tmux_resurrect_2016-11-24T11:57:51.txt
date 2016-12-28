@@ -1,0 +1,5 @@
+pane	main	0	:Sudoku	1	:*	0	:/Users/naitian/Documents/School/CS/Labs/Sudoku	0	Vim	:/usr/local/Cellar/macvim/7.4-96/MacVim.app/Contents/MacOS/Vim twodoku.py
+pane	main	0	:Sudoku	1	:*	1	:/Users/naitian/Documents/School/CS/Labs/Sudoku	0	Vim	:/usr/local/Cellar/macvim/7.4-96/MacVim.app/Contents/MacOS/Vim sudoku.py
+pane	main	0	:Sudoku	1	:*	2	:/Users/naitian/Documents/School/CS/Labs/Sudoku	1	bash	:
+window	main	0	1	:*	7c75,137x53,0,0{87x53,0,0,0,49x53,88,0[49x23,88,0,1,49x29,88,24,7]}
+state	main	

@@ -12,6 +12,8 @@ set foldmethod=indent
 set foldnestmax=10
 set nofoldenable
 set foldlevel=2
+set wildmenu
+set path+=**
 set t_ut=
 filetype off                  " required
 
@@ -48,7 +50,10 @@ Plugin 'isruslan/vim-es6'
 Plugin 'tomtom/tcomment_vim'
 Plugin 'tyru/open-browser.vim'
 Plugin 'junegunn/goyo.vim'
-
+Plugin 'hail2u/vim-css3-syntax'
+Plugin 'PProvost/vim-markdown-jekyll'
+Plugin 'maksimr/vim-jsbeautify'
+Plugin 'ctrlpvim/ctrlp.vim'
 " YCM-UltiSnip-SuperTab:
 " ------------------------------
 let g:ycm_key_list_select_completion = ['<C-j>', '<Down>']
@@ -68,6 +73,11 @@ let g:ycm_collect_identifiers_from_comments_and_strings = 1
 " Material Theme
 set background=dark
 colorscheme hybrid_material
+
+" Light Background for Markdown
+autocmd BufEnter * colorscheme hybrid_material
+autocmd BufEnter * set background=dark
+autocmd BufEnter *.md set background=light
 
 " Airline + Material
 let g:airline_theme = "hybridalt"
@@ -96,6 +106,8 @@ let g:syntastic_python_flake8_args = '--ignore="E501,E302,E261,E701,E241,E126,E1
 
 let g:syntastic_html_tidy_ignore_errors=["<a-", "discarding unexpected </a-", " proprietary attribute \"a-"]
 
+" CtrlP Config
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 
 call vundle#end()            " required
 filetype plugin indent on    " required

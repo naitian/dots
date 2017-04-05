@@ -1,1 +1,3 @@
 vimrc/.vim/bundle/
+tmux/.tmux/resurrect/**/*
+**/*.swp

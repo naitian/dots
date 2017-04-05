@@ -15,7 +15,13 @@ set foldlevel=2
 set wildmenu
 set path+=**
 set t_ut=
+set clipboard=unnamed
 filetype off                  " required
+
+" netrw settings
+let g:netrw_liststyle = 3
+let g:netrw_browse_split = 4
+let g:netrw_winsize = 25
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -54,8 +60,21 @@ Plugin 'hail2u/vim-css3-syntax'
 Plugin 'PProvost/vim-markdown-jekyll'
 Plugin 'maksimr/vim-jsbeautify'
 Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'mxw/vim-jsx'
+Plugin 'tpope/vim-vinegar'
+Plugin 'editorconfig/editorconfig-vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'dhruvasagar/vim-table-mode'
+Plugin 'tpope/vim-obsession'
+Plugin 'sheerun/vim-polyglot'
+
+" ================== "
+"                    "
+" PLUGIN PREFERENCES "
+"                    "
+" ================== "
+
 " YCM-UltiSnip-SuperTab:
-" ------------------------------
 let g:ycm_key_list_select_completion = ['<C-j>', '<Down>']
 let g:ycm_key_list_previous_completion = ['<C-k>', '<Up>']
 let g:SuperTabDefaultCompletionType = '<C-n>'
@@ -65,7 +84,6 @@ let g:UltiSnipsExpandTrigger= "<tab>"
 let g:UltiSnipsJumpForwardTrigger = "<tab>" " you can use <c-j>
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 " YCM
-" ------
 let g:ycm_complete_in_comments = 1
 let g:ycm_seed_identifiers_with_syntax = 1
 let g:ycm_collect_identifiers_from_comments_and_strings = 1
@@ -102,12 +120,16 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 1
 
 let g:syntastic_python_checkers = ['flake8']
-let g:syntastic_python_flake8_args = '--ignore="E501,E302,E261,E701,E241,E126,E127,E128,W801"'
+let g:syntastic_javascript_checkers = ['eslint']
+" let g:syntastic_python_flake8_args = '--ignore="E501,E302,E261,E701,E241,E126,E127,E128,W801"'
 
 let g:syntastic_html_tidy_ignore_errors=["<a-", "discarding unexpected </a-", " proprietary attribute \"a-"]
 
 " CtrlP Config
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
+
+" vim-jsx
+let g:jsx_ext_required = 0
 
 call vundle#end()            " required
 filetype plugin indent on    " required

@@ -1,4 +1,5 @@
 vimrc/.vim/bundle/
+!vimrc/.vim/bundle/vim-airline-themes/
 tmux/.tmux/plugins/
 tmux/.tmux/resurrect/
 **/*.swp

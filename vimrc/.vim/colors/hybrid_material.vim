@@ -85,7 +85,7 @@ let g:colors_name = "hybrid_material"
 
 let s:palette = {'gui' : {} , 'cterm' : {}}
 
-let s:gui_background = "#263238"
+let s:gui_background = "#292929"
 let s:gui_selection  = "#455A64"
 let s:gui_line       = "#212D32"
 let s:gui_comment    = "#707880"
@@ -114,58 +114,58 @@ let s:palette.gui.darkcyan   = { 'dark' : "#005f5f"        , 'light' : "#005f00"
 let s:palette.gui.darkred    = { 'dark' : "#5f0000"        , 'light' : "#d7d7ff" }
 let s:palette.gui.darkpurple = { 'dark' : "#5f005f"        , 'light' : "#5f005f" }
 
-if exists("g:hybrid_custom_term_colors") && g:hybrid_custom_term_colors == 1
-  let s:cterm_foreground = "15"  " White
-  let s:cterm_selection  = "8"   " DarkGrey
-  let s:cterm_line       = "0"   " Black
-  let s:cterm_comment    = "7"   " LightGrey
-  let s:cterm_red        = "9"   " LightRed
-  let s:cterm_orange     = "3"   " DarkYellow
-  let s:cterm_yellow     = "11"  " LightYellow
-  let s:cterm_green      = "10"  " LightGreen
-  let s:cterm_aqua       = "14"  " LightCyan
-  let s:cterm_blue       = "12"  " LightBlue
-  let s:cterm_purple     = "13"  " LightMagenta
-  let s:cterm_delbg      = "9"   " LightRed
-else
-  let s:cterm_foreground = "250"
-  let s:cterm_selection  = "237"
-  let s:cterm_line       = "235"
-  let s:cterm_comment    = "243"
-  let s:cterm_red        = "167"
-  let s:cterm_orange     = "173"
-  let s:cterm_yellow     = "221"
-  let s:cterm_green      = "143"
-  let s:cterm_aqua       = "109"
-  let s:cterm_blue       = "110"
-  let s:cterm_purple     = "139"
-  let s:cterm_delbg      = "167"
-endif
-
-let s:palette.cterm.background = { 'dark' : "234"              , 'light' : "254" }
-let s:palette.cterm.foreground = { 'dark' : s:cterm_foreground , 'light' : "16"  }
-let s:palette.cterm.window     = { 'dark' : "236"              , 'light' : "247" }
-let s:palette.cterm.selection  = { 'dark' : s:cterm_selection  , 'light' : "250" }
-let s:palette.cterm.line       = { 'dark' : s:cterm_line       , 'light' : "252" }
-let s:palette.cterm.comment    = { 'dark' : s:cterm_comment    , 'light' : "59"  }
-let s:palette.cterm.red        = { 'dark' : s:cterm_red        , 'light' : "52"  }
-let s:palette.cterm.orange     = { 'dark' : s:cterm_orange     , 'light' : "94"  }
-let s:palette.cterm.yellow     = { 'dark' : s:cterm_yellow     , 'light' : "58"  }
-let s:palette.cterm.green      = { 'dark' : s:cterm_green      , 'light' : "22"  }
-let s:palette.cterm.aqua       = { 'dark' : s:cterm_aqua       , 'light' : "23"  }
-let s:palette.cterm.blue       = { 'dark' : s:cterm_blue       , 'light' : "17"  }
-let s:palette.cterm.purple     = { 'dark' : s:cterm_purple     , 'light' : "53"  }
-let s:palette.cterm.darkcolumn = { 'dark' : "234"              , 'light' : "244" }
-let s:palette.cterm.addbg      = { 'dark' : "65"               , 'light' : "194" }
-let s:palette.cterm.addfg      = { 'dark' : "193"              , 'light' : "22"  }
-let s:palette.cterm.changebg   = { 'dark' : "60"               , 'light' : "189" }
-let s:palette.cterm.changefg   = { 'dark' : "189"              , 'light' : "53"  }
-let s:palette.cterm.delbg      = { 'dark' : s:cterm_delbg      , 'light' : "224" }
-let s:palette.cterm.darkblue   = { 'dark' : "17"               , 'light' : "194" }
-let s:palette.cterm.darkcyan   = { 'dark' : "24"               , 'light' : "22"  }
-let s:palette.cterm.darkred    = { 'dark' : "52"               , 'light' : "189" }
-let s:palette.cterm.darkpurple = { 'dark' : "53"               , 'light' : "53"  }
-
+" if exists("g:hybrid_custom_term_colors") && g:hybrid_custom_term_colors == 1
+"   let s:cterm_foreground = "15"  " White
+"   let s:cterm_selection  = "8"   " DarkGrey
+"   let s:cterm_line       = "0"   " Black
+"   let s:cterm_comment    = "7"   " LightGrey
+"   let s:cterm_red        = "9"   " LightRed
+"   let s:cterm_orange     = "3"   " DarkYellow
+"   let s:cterm_yellow     = "11"  " LightYellow
+"   let s:cterm_green      = "10"  " LightGreen
+"   let s:cterm_aqua       = "14"  " LightCyan
+"   let s:cterm_blue       = "12"  " LightBlue
+"   let s:cterm_purple     = "13"  " LightMagenta
+"   let s:cterm_delbg      = "9"   " LightRed
+" else
+"   let s:cterm_foreground = "250"
+"   let s:cterm_selection  = "237"
+"   let s:cterm_line       = "235"
+"   let s:cterm_comment    = "243"
+"   let s:cterm_red        = "167"
+"   let s:cterm_orange     = "173"
+"   let s:cterm_yellow     = "221"
+"   let s:cterm_green      = "143"
+"   let s:cterm_aqua       = "109"
+"   let s:cterm_blue       = "110"
+"   let s:cterm_purple     = "139"
+"   let s:cterm_delbg      = "167"
+" endif
+"
+" let s:palette.cterm.background = { 'dark' : "234"              , 'light' : "254" }
+" let s:palette.cterm.foreground = { 'dark' : s:cterm_foreground , 'light' : "16"  }
+" let s:palette.cterm.window     = { 'dark' : "236"              , 'light' : "247" }
+" let s:palette.cterm.selection  = { 'dark' : s:cterm_selection  , 'light' : "250" }
+" let s:palette.cterm.line       = { 'dark' : s:cterm_line       , 'light' : "252" }
+" let s:palette.cterm.comment    = { 'dark' : s:cterm_comment    , 'light' : "59"  }
+" let s:palette.cterm.red        = { 'dark' : s:cterm_red        , 'light' : "52"  }
+" let s:palette.cterm.orange     = { 'dark' : s:cterm_orange     , 'light' : "94"  }
+" let s:palette.cterm.yellow     = { 'dark' : s:cterm_yellow     , 'light' : "58"  }
+" let s:palette.cterm.green      = { 'dark' : s:cterm_green      , 'light' : "22"  }
+" let s:palette.cterm.aqua       = { 'dark' : s:cterm_aqua       , 'light' : "23"  }
+" let s:palette.cterm.blue       = { 'dark' : s:cterm_blue       , 'light' : "17"  }
+" let s:palette.cterm.purple     = { 'dark' : s:cterm_purple     , 'light' : "53"  }
+" let s:palette.cterm.darkcolumn = { 'dark' : "234"              , 'light' : "244" }
+" let s:palette.cterm.addbg      = { 'dark' : "65"               , 'light' : "194" }
+" let s:palette.cterm.addfg      = { 'dark' : "193"              , 'light' : "22"  }
+" let s:palette.cterm.changebg   = { 'dark' : "60"               , 'light' : "189" }
+" let s:palette.cterm.changefg   = { 'dark' : "189"              , 'light' : "53"  }
+" let s:palette.cterm.delbg      = { 'dark' : s:cterm_delbg      , 'light' : "224" }
+" let s:palette.cterm.darkblue   = { 'dark' : "17"               , 'light' : "194" }
+" let s:palette.cterm.darkcyan   = { 'dark' : "24"               , 'light' : "22"  }
+" let s:palette.cterm.darkred    = { 'dark' : "52"               , 'light' : "189" }
+" let s:palette.cterm.darkpurple = { 'dark' : "53"               , 'light' : "53"  }
+"
 "}}}
 " Formatting Options:"{{{
 " ----------------------------------------------------------------------------

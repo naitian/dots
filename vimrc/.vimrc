@@ -27,6 +27,13 @@ set t_ut=
 set t_Co=256
 set clipboard=unnamed
 set backspace=2
+
+set scrolloff=3
+
+set fillchars=vert:┃
+
+set shortmess+=c
+
 filetype off                  " required
 " }}}
 
@@ -95,6 +102,12 @@ let mapleader = " "
 
 " Quick reload vimrc
 nnoremap <leader>r <esc>:source ~/.vimrc<CR>
+
+" Navigating windows
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
 
 " CtrlP
 nnoremap <leader>i <esc>:CtrlPBuffer<CR>

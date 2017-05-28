@@ -27,6 +27,7 @@ set t_ut=
 set t_Co=256
 set clipboard=unnamed
 set backspace=2
+set incsearch
 
 set scrolloff=3
 
@@ -68,38 +69,35 @@ Plugin 'ervandew/supertab'
 Plugin 'tpope/vim-fugitive'
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
-Plugin 'kristijanhusak/vim-hybrid-material'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'tpope/vim-surround'
 Plugin 'pangloss/vim-javascript'
 Plugin 'othree/html5.vim'
-Plugin 'ap/vim-css-color'
+" Plugin 'ap/vim-css-color'
 Plugin 'isruslan/vim-es6'
 Plugin 'tomtom/tcomment_vim'
-Plugin 'tyru/open-browser.vim'
 Plugin 'junegunn/goyo.vim'
-Plugin 'hail2u/vim-css3-syntax'
+" Plugin 'hail2u/vim-css3-syntax'
 Plugin 'PProvost/vim-markdown-jekyll'
 Plugin 'maksimr/vim-jsbeautify'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'mxw/vim-jsx'
-Plugin 'tpope/vim-vinegar'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'scrooloose/nerdtree'
-Plugin 'dhruvasagar/vim-table-mode'
-Plugin 'tpope/vim-obsession'
-Plugin 'sheerun/vim-polyglot'
-Plugin 'vim-scripts/textutil.vim'
+Plugin 'wincent/loupe'
+Plugin 'tpope/vim-repeat'
+" Plugin 'sheerun/vim-polyglot'
 "}}}
 
 " ================== "
-"   MAPS & SCRIPTS   "
+"   MAPS & SCRIPTS   j
 " ================== "
 " Keybindings {{{
 " Show syntax highlighting groups for word under cursor
 
 let mapleader = " "
 
+nnoremap <leader><leader> <C-^>
 " Quick reload vimrc
 nnoremap <leader>r <esc>:source ~/.vimrc<CR>
 

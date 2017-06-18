@@ -2,14 +2,15 @@ hi clear
 if exists("syntax_on")
     syntax reset
 endif
+
 let g:colors_name = "scheme"
 
 " Define color variables
-let s:bg_dark  =  {'cterm':  'NONE'}
-let s:white    =  {'cterm':  253}
-let s:black    =  {'cterm':  235}
-let s:gray1    =  {'cterm':  059}
-let s:accent   =  {'cterm':  226}
+let s:bg_dark  =  { "gui": "#292929", "cterm":  "NONE" }
+let s:white    =  { "gui": "#", "cterm":  253 }
+let s:black    =  { "gui": "#", "cterm":  235 }
+let s:gray1    =  { "gui": "#", "cterm":  059 }
+let s:accent   =  { "gui": "#", "cterm":  226 }
 
 
 if &background == "dark"
@@ -41,6 +42,11 @@ if &background == "dark"
     hi  WildMenu              ctermfg=015   ctermbg=NONE  cterm=bold
     hi  SyntasticErrorLine    ctermfg=203   ctermbg=NONE  cterm=NONE
     hi  SyntasticWarningLine  ctermfg=221   ctermbg=NONE  cterm=NONE
+
+    " Statusline
+
+    hi User1               ctermfg=255   ctermbg=238   cterm=BOLD
+    hi User3                ctermfg=255 ctermbg=57 cterm=BOLD
 else
     set background=light
     hi  Normal        ctermfg=232   ctermbg=231  cterm=NONE

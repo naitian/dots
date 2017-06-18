@@ -35,7 +35,43 @@ set fillchars=vert:┃
 
 set shortmess+=c
 
-filetype off                  " required
+" }}}
+
+" statusline {{{
+
+" let g:currentmode={
+"     \ 'n'  : 'N ',
+"     \ 'no' : 'N·Operator Pending ',
+"     \ 'v'  : 'V ',
+"     \ 'V'  : 'V·Line ',
+"     \ '\<C-V>' : 'V·Block ',
+"     \ 's'  : 'Select ',
+"     \ 'S'  : 'S·Line ',
+"     \ '\<C-S>' : 'S·Block ',
+"     \ 'i'  : 'I ',
+"     \ 'R'  : 'R ',
+"     \ 'Rv' : 'V·Replace ',
+"     \ 'c'  : 'Command ',
+"     \ 'cv' : 'Vim Ex ',
+"     \ 'ce' : 'Ex ',
+"     \ 'r'  : 'Prompt ',
+"     \ 'rm' : 'More ',
+"     \ 'r?' : 'Confirm ',
+"     \ '!'  : 'Shell ',
+"     \ 't'  : 'Terminal '
+" \}
+" set laststatus=2
+" if (mode() =~# '\v(n|no)')
+"     set statusline=%#User1#
+" elseif (mode() =~# '\v(v|V)' || g:currentmode[mode()] ==# 'V·Block')
+"     set statusline=%$#User2#
+" elseif (mode() ==# 'i')
+"     set statusline=%#User3#
+" else
+"     set statusline=%#User4#
+" endif
+"
+" set statusline+=\ %2{g:modenames[mode()]}
 " }}}
 
 " netrw settings {{{
@@ -44,49 +80,48 @@ let g:netrw_browse_split = 4
 let g:netrw_winsize = 25
 " }}}
 
-" set the runtime path to include Vundle and initialize {{{
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
-"}}}
+" Load vim-plug
+if empty(glob("~/.vim/autoload/plug.vim"))
+    execute '!curl -fLo ~/.vim/autoload/plug.vim https://raw.github.com/junegunn/vim-plug/master/plug.vim'
+endif
 
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
+call plug#begin('~/.vim/plugged')
+
 
 " Plugins {{{
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'MarcWeber/vim-addon-mw-utils'
-Plugin 'tomtom/tlib_vim'
-Plugin 'honza/vim-snippets'
-Plugin 'jiangmiao/auto-pairs'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'sirver/ultisnips'
-Plugin 'terryma/vim-multiple-cursors'
-Plugin 'ntpeters/vim-better-whitespace'
-Plugin 'ervandew/supertab'
-Plugin 'tpope/vim-fugitive'
-Plugin 'godlygeek/tabular'
-Plugin 'plasticboy/vim-markdown'
-Plugin 'vim-syntastic/syntastic'
-Plugin 'tpope/vim-surround'
-Plugin 'pangloss/vim-javascript'
-Plugin 'othree/html5.vim'
-" Plugin 'ap/vim-css-color'
-Plugin 'isruslan/vim-es6'
-Plugin 'tomtom/tcomment_vim'
-Plugin 'junegunn/goyo.vim'
-" Plugin 'hail2u/vim-css3-syntax'
-Plugin 'PProvost/vim-markdown-jekyll'
-Plugin 'maksimr/vim-jsbeautify'
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'mxw/vim-jsx'
-Plugin 'editorconfig/editorconfig-vim'
-Plugin 'scrooloose/nerdtree'
-Plugin 'wincent/loupe'
-Plugin 'tpope/vim-repeat'
-" Plugin 'sheerun/vim-polyglot'
+Plug 'Valloric/YouCompleteMe', {'on': []}
+Plug 'MarcWeber/vim-addon-mw-utils'
+Plug 'tomtom/tlib_vim'
+Plug 'honza/vim-snippets'
+Plug 'jiangmiao/auto-pairs'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'sirver/ultisnips', {'on': []}
+Plug 'terryma/vim-multiple-cursors'
+Plug 'ntpeters/vim-better-whitespace'
+Plug 'ervandew/supertab'
+Plug 'tpope/vim-fugitive'
+Plug 'godlygeek/tabular'
+Plug 'plasticboy/vim-markdown', {'for': ['markdown', 'md']}
+Plug 'vim-syntastic/syntastic'
+Plug 'tpope/vim-surround'
+Plug 'pangloss/vim-javascript', {'for': ['javascript']}
+Plug 'othree/html5.vim', {'for': ['css', 'html']}
+Plug 'ap/vim-css-color', {'for': ['css', 'html']}
+Plug 'isruslan/vim-es6', {'for': 'javascript'}
+Plug 'tomtom/tcomment_vim'
+Plug 'junegunn/goyo.vim', {'for': 'markdown'}
+Plug 'hail2u/vim-css3-syntax', {'for': ['css', 'html']}
+" Plug 'PProvost/vim-markdown-jekyll', {'for': ['markdown', 'md']}
+" Plug 'maksimr/vim-jsbeautify'
+Plug 'ctrlpvim/ctrlp.vim', {'on': ['CtrlP', 'CtrlPBuffer']}
+Plug 'mxw/vim-jsx', {'for': 'javascript'}
+Plug 'editorconfig/editorconfig-vim'
+Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}
+Plug 'wincent/loupe'
+Plug 'tpope/vim-repeat'
+Plug 'vimwiki/vimwiki'
+" Plug 'sheerun/vim-polyglot'
 "}}}
 
 " ================== "
@@ -94,6 +129,9 @@ Plugin 'tpope/vim-repeat'
 " ================== "
 " Keybindings {{{
 " Show syntax highlighting groups for word under cursor
+ 
+" Display images iwth imgcat
+autocmd BufEnter *.png,*.jpg,*gif exec "! ~/.iterm2/imgcat ".expand("%") | :bw
 
 let mapleader = " "
 
@@ -109,6 +147,10 @@ nnoremap <C-l> <C-w>l
 
 " CtrlP
 nnoremap <leader>i <esc>:CtrlPBuffer<CR>
+nnoremap <leader>p <esc>:CtrlP<CR>
+
+" Syntastic
+nnoremap <leader>s <esc>:SyntasticToggle<CR>
 
 " Show highlight groups
 nnoremap <leader>h :call <SID>SynStack()<CR>
@@ -133,7 +175,7 @@ colorscheme scheme
 " Light Background for Markdown
 autocmd BufEnter * colorscheme scheme
 autocmd BufEnter * set background=dark
-autocmd VimEnter * if &filetype !=# 'gitcommit' | NERDTree | endif
+" autocmd VimEnter * if &filetype !=# 'gitcommit' | NERDTree | endif
 " autocmd BufEnter *.md set background=light
 "}}}
 
@@ -147,7 +189,16 @@ let g:airline_theme = "scheme"
 " ================== "
 " Plugin Preferences {{{
 
+" vim-markdown {{{
+"
+" }}}
+
 " YCM-UltiSnip-SuperTab: {{{
+augroup load_us_ycm
+  autocmd!
+  autocmd InsertEnter * call plug#load('ultisnips', 'YouCompleteMe')
+                     \| autocmd! load_us_ycm
+augroup END
 let g:ycm_key_list_select_completion = ['<C-j>', '<Down>']
 let g:ycm_key_list_previous_completion = ['<C-k>', '<Up>']
 let g:ycm_server_python_interpreter = '/Users/naitian/anaconda3/bin/python'
@@ -200,11 +251,15 @@ let g:jsx_ext_required = 0
 "}}}
 
 " NERDTree {{{
-autocmd vimenter * NERDTree
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+" autocmd vimenter * NERDTree
+" autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+" }}}
+
+" vimwiki {{{
+let g:vimwiki_list = [{
+                    \ 'path':'~/Documents/School/CS/Projects/wiki'
+                    \ }]
 " }}}
 " }}}
 
-call vundle#end()            " required
-filetype plugin indent on    " required
-
+call plug#end()            " required

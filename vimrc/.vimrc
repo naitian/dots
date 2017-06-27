@@ -49,6 +49,9 @@ set listchars+=tab:--
 set listchars+=trail:·
 set list
 
+let &t_ZH="\e[3m"       "Italics
+let &t_ZR="\e[23m"
+
 " }}}
 
 " statusline {{{

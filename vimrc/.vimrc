@@ -7,19 +7,28 @@ augroup END
 
 " Some Options -----{{{
 syntax on
-set number
-set mouse=a
+set number " Line numbers"
+set mouse=a " Mouse mode"
+
+" 4-space tabs
 set tabstop=4
 set shiftwidth=4
 set expandtab
+
 set backupskip=/tmp/*,/private/tmp/*
+
 set smartindent
+
 set nocompatible              " be iMproved, required
+
 set cursorline
+
+" Folding
 set foldmethod=indent
 set foldnestmax=10
 set nofoldenable
 set foldlevel=2
+
 set wildmenu
 set path+=**
 set ttimeoutlen=25
@@ -34,6 +43,11 @@ set scrolloff=3
 set fillchars=vert:┃
 
 set shortmess+=c
+
+set listchars=
+set listchars+=tab:--
+set listchars+=trail:·
+set list
 
 " }}}
 
@@ -107,11 +121,11 @@ Plug 'vim-syntastic/syntastic'
 Plug 'tpope/vim-surround'
 Plug 'pangloss/vim-javascript', {'for': ['javascript']}
 Plug 'othree/html5.vim', {'for': ['css', 'html']}
-Plug 'ap/vim-css-color', {'for': ['css', 'html']}
+Plug 'ap/vim-css-color', {'for': ['css', 'html', 'scss']}
 Plug 'isruslan/vim-es6', {'for': 'javascript'}
 Plug 'tomtom/tcomment_vim'
 Plug 'junegunn/goyo.vim', {'for': 'markdown'}
-Plug 'hail2u/vim-css3-syntax', {'for': ['css', 'html']}
+Plug 'hail2u/vim-css3-syntax', {'for': ['css', 'html', 'scss']}
 " Plug 'PProvost/vim-markdown-jekyll', {'for': ['markdown', 'md']}
 " Plug 'maksimr/vim-jsbeautify'
 Plug 'ctrlpvim/ctrlp.vim', {'on': ['CtrlP', 'CtrlPBuffer']}
@@ -121,6 +135,7 @@ Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}
 Plug 'wincent/loupe'
 Plug 'tpope/vim-repeat'
 Plug 'vimwiki/vimwiki'
+Plug 'tpope/vim-sleuth'
 " Plug 'sheerun/vim-polyglot'
 "}}}
 
@@ -129,7 +144,7 @@ Plug 'vimwiki/vimwiki'
 " ================== "
 " Keybindings {{{
 " Show syntax highlighting groups for word under cursor
- 
+
 " Display images iwth imgcat
 autocmd BufEnter *.png,*.jpg,*gif exec "! ~/.iterm2/imgcat ".expand("%") | :bw
 

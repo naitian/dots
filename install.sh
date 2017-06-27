@@ -12,6 +12,8 @@ ln -s $PWD/tmux/.tmux.conf $HOME/.tmux.conf
 vim +PlugInstall +qall
 tmux source ~/.tmux.conf
 
+cp $PWD/vimrc/.vim/colors/airline-scheme.vim $PWD/vimrc/.vim/plugged/vim-airline-themes/autoload/airline/themes/scheme.vim
+
 # Compile YouCompleteMe
 cd ~/.vim/plugged/YouCompleteMe
 ./install.py --all

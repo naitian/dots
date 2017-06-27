@@ -13,5 +13,5 @@ vim +PlugInstall +qall
 tmux source ~/.tmux.conf
 
 # Compile YouCompleteMe
-cd ~/.vim/bundle/YouCompleteMe
+cd ~/.vim/plugged/YouCompleteMe
 ./install.py --all

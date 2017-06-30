@@ -119,16 +119,17 @@ Plug 'ntpeters/vim-better-whitespace'
 Plug 'ervandew/supertab'
 Plug 'tpope/vim-fugitive'
 Plug 'godlygeek/tabular'
-Plug 'plasticboy/vim-markdown', {'for': ['markdown', 'md']}
+Plug 'plasticboy/vim-markdown', {'for': ['markdown', 'md', 'liquid']}
+" Plug 'tpope/vim-markdown', {'for': ['markdown', 'md']}
 Plug 'vim-syntastic/syntastic'
 Plug 'tpope/vim-surround'
 Plug 'pangloss/vim-javascript', {'for': ['javascript']}
-Plug 'othree/html5.vim', {'for': ['css', 'html']}
-Plug 'ap/vim-css-color', {'for': ['css', 'html', 'scss']}
+Plug 'othree/html5.vim', {'for': ['css', 'html', 'liquid']}
+Plug 'ap/vim-css-color', {'for': ['css', 'html', 'scss', 'liquid']}
 Plug 'isruslan/vim-es6', {'for': 'javascript'}
 Plug 'tomtom/tcomment_vim'
 Plug 'junegunn/goyo.vim', {'for': 'markdown'}
-Plug 'hail2u/vim-css3-syntax', {'for': ['css', 'html', 'scss']}
+Plug 'hail2u/vim-css3-syntax', {'for': ['css', 'html', 'scss', 'liquid']}
 " Plug 'PProvost/vim-markdown-jekyll', {'for': ['markdown', 'md']}
 " Plug 'maksimr/vim-jsbeautify'
 Plug 'ctrlpvim/ctrlp.vim', {'on': ['CtrlP', 'CtrlPBuffer']}
@@ -139,6 +140,8 @@ Plug 'wincent/loupe'
 Plug 'tpope/vim-repeat'
 Plug 'vimwiki/vimwiki'
 Plug 'tpope/vim-sleuth'
+" Plug 'tpope/vim-liquid', {'for': ['html', 'liquid']}
+" Plug 'reedes/vim-pencil'
 " Plug 'sheerun/vim-polyglot'
 "}}}
 
@@ -207,8 +210,20 @@ let g:airline_theme = "scheme"
 " ================== "
 " Plugin Preferences {{{
 
+" Pencil {{{
+" let g:pencil#wrapModeDefault = 'soft'
+" augroup pencil
+"   autocmd!
+"   autocmd FileType markdown,mkd,md call pencil#init()
+"   autocmd FileType text         call pencil#init()
+" augroup END
+" }}}
+
 " vim-markdown {{{
-"
+
+let g:vim_markdown_fenced_languages = ['c++=cpp', 'viml=vim', 'bash=sh', 'ini=dosini', 'py=python', 'js=javascript']
+let g:vim_markdown_frontmatter = 1
+
 " }}}
 
 " YCM-UltiSnip-SuperTab: {{{
@@ -262,6 +277,7 @@ let g:syntastic_html_tidy_ignore_errors=["<a-", "discarding unexpected </a-", " 
 
 " CtrlP Config {{{
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
+let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
 "}}}
 
 " vim-jsx {{{

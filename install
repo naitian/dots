@@ -21,6 +21,7 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
 
     # Install homebrew
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+    install reattach-to-user-namespace
 
 fi
 

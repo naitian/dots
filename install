@@ -20,7 +20,9 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
     echo "Running MacOS install steps"
 
     # Install homebrew
-    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+    if [ ! -f /usr/local/bin/brew ]; then
+        /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+    fi
     install reattach-to-user-namespace
 
 fi

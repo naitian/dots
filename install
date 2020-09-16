@@ -26,3 +26,6 @@ fi
 
 install stow
 install wget tmux neovim
+
+# Install TPM
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm

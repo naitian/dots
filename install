@@ -1,0 +1,28 @@
+#!/bin/bash
+
+set -x
+
+function install() {
+    if [[ "$OSTYPE" == "linux-gnu"* ]]; then
+        # Linux
+        apt-get install $@
+    elif [[ "$OSTYPE" == "darwin"* ]]; then
+        # MacOS
+        brew install $@
+    fi
+}
+
+if [[ "$OSTYPE" == "linux-gnu"* ]]; then
+    # Linux
+    echo "Linux currently unsupported"
+elif [[ "$OSTYPE" == "darwin"* ]]; then
+    # MacOS
+    echo "Running MacOS install steps"
+
+    # Install homebrew
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+
+fi
+
+install stow
+install wget tmux neovim

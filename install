@@ -23,12 +23,27 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
     if [ ! -f /usr/local/bin/brew ]; then
         /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
     fi
-    install reattach-to-user-namespace
+
+    brew install reattach-to-user-namespace
+
+    # Install window manager Rectangle
+    brew cask install rectangle
+
+    # Dock settings
+    defaults write com.apple.dock orientation left
+    defaults write com.apple.dock autohide -bool true
+    defaults write com.apple.dock autohide-delay -float 0
+    defaults write com.apple.dock autohide-time-modifier -float 0.17
+    killall Dock
 
 fi
 
 install stow
 install wget tmux neovim
+install python
 
 # Install TPM
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
+# Install nvm
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash

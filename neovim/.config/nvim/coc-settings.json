@@ -1,0 +1,9 @@
+{
+  "suggest.autoTrigger": "always",
+  "suggest.minTriggerInputLength": 2,
+  "python.linting.pylintArgs": [],
+  "python.formatting.provider": "black",
+  "python.jediEnabled": false,
+  "javascript.suggestionActions.enabled": false,
+  "html.format.enable": true
+}
